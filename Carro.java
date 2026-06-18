@@ -1,6 +1,5 @@
 //Cria classe carro 
 
-import javax.print.DocFlavor.STRING;
 
 public class Carro {
     
@@ -8,15 +7,20 @@ public class Carro {
     String marca;
     String modelo;
     int ano;
-    double valor; 
+    double valor;
+    String cor;
+    double motor; 
+    
 
 
     //Construtor
-    public Carro( String marca,String modelo,int ano,double valor){
+    public Carro( String marca,String modelo,int ano,double valor,String cor,double motor){
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
-        this.valor = valor;                                                      
+        this.valor = valor;   
+        this.cor = cor;
+        this.motor = motor;                                                   
 
     }
     
@@ -27,6 +31,8 @@ public class Carro {
         System.out.println("Modelo:"+modelo);
         System.out.println("ano:" +ano);
         System.oyt.println("Valor:R$" +valor);
+        System.oyt.println("Cor:" +cor);
+        System.oyt.println("motor:" +motor);
     }
      
 
@@ -47,6 +53,14 @@ public class Carro {
         return valor;
     }
 
+    public double getcor(){
+        return cor;
+    }
+
+    public double getmotor(){
+        return motor;
+    }
+
     //Metodos SET
     public Void setMarca(String marca){
         this.marca = marca;
@@ -62,5 +76,13 @@ public class Carro {
 
     public Void setValor(double valor){
         this.valor = valor;
+    }
+
+    public Void setCor(String cor){
+        this.cor = cor;
+    }
+
+    public Void setMotor(double motor){
+        this.motor = motor;
     }
 }
