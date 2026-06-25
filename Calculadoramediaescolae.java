@@ -25,15 +25,15 @@ public class Calculadoramediaescolae {
 
 
         //calcula a media 
-        double media =(nota1 + nota2 + nota 3)/3;
+        double media =(nota1 + nota2 + nota3)/3;
 
         //criar um contador iniciando em zero
         int quantidadeNotas = 0;
 
         //incrementa 3x o contador
-        int quantidadedeNotas++;
-        int quantidadedeNotas++;
-        int quantidadedeNotas++;
+         quantidadedeNotas++;
+         quantidadedeNotas++;
+         quantidadedeNotas++;
 
         //Exibindo na tela
         System.out.println("\n==== RESULTADO ====");
@@ -68,7 +68,78 @@ public class Calculadoramediaescolae {
         }else{
             System.out.println("Status: Reprovado");
         }
-    }
+        
+        //Verifica se o nome é maria ou joao
+        if(nome.equals("Maria") || nome.equals("Lucas")){
+            //Executa se uma condiçao for verdadeira
+            System.out.println("Aluno cadastrado no grupo");
+        }else{
+            System.out.println("Aluno nao cadastrado"); 
+        }
+        
+        //Criar uma variavel boolena indicandicando a situaçao de recuperaçao
+        boolean recuperaçao = false;
+
+        //O ! inverte valor lógico
+        //Como recuperaçao é false,!recuperaçao é true
+        if(!recuperaçao){
+            //Executa quando nao esta em recuperaçao
+            System.out.println("Nao esta em recuperaçao");
+        }
+
+        //Operador ternario , forma simplificada de um if else
+            String resultado = media >=7 ?
+        "Passou de ano" : " Nao passou" ;
+        
+        //Mostrar o resultado final
+        System.out.println(resultado);
+        
+
+        //Criar um menu de opçoes
+        System.out.println("\nEscolha uma opçao");
+        //Mostrar opaço 1
+        System.out.println("1-mostrar media");
+        //Mostra opçao 2
+        System.out.println("2- Mostrar status");
+        //Mostrar opçao 3
+        System.out.println("3- Encerra");
+
+        //Recebe a opaçao do usuario
+        int opçao = entrada.nextInt();
+
+        //Estrutura swich para escolher a opçao
+        switch (opcao) {
+            //Caso o uduari escolha 1 
+            case 1:
+                //Mostra a media final
+                System.out.println("Media final:"+ media);
+                //Encerrar este case
+                break;
+
+                //Caso o usuario escola 2
+            case 2:
+                //Mostra a media final
+                System.out.println("Status do aluno:"+ resultado);
+                //Encerrar este case
+                break;
+            
+             //Caso o usuario escola 3
+            case 3:
+                //Mostra a media final
+                System.out.println("Sistema encerrado");
+                //Encerrar este case
+                break;
+
+                //Execute caso nenhuma opçao seja encontrada
+                default:
+                    //Mostrar mensagem de erro
+                    System.out.println("Opçao invalida");
+
+        }
+        //Fecha o scannner
+        encontrar.close();
+
+     }
 
     
 }
