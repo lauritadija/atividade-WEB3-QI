@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Trabalhando com Formulario</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section class="container">
+            <h1 class="text-center">formulário </h1>
+            <form method="get" action="form.jsp">
+                <div class="form-group">
+                    <label>usuário:</label>
+                    <input type="text" name="nome" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>senha:</label>
+                    <input type="password" name="senha" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Nome completo</label>
+                    <input type="text" name="nomeCompleto" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>idade:</label>
+                    <input type="number" name="idade" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Faixa Etária:</label>
+                    <select name="faixaEtaria" class="form-control" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="Criança">Criança</option>
+                        <option value="Adolescente">Adolescente</option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Idoso">Idoso</option>
+                    </select>
+                </div>
+                
+               <div class="form-group">
+                    <label>Curso:</label>
+                    <select name="curso" class="form-control" required>
+                        <option value="" disabled selected>Selecione o seu curso...</option>
+                        <option value="Administração">Administração</option>
+                        <option value="Direito">Direito</option>
+                        <option value="Enfermagem">Enfermagem</option>
+                        <option value="Informática">Informática</option>
+                    </select>
+                </div>
+                
+                
+               
+                <input type="submit" name="envia" value="Enviar" class="btn btn-primary">
+                
+            </form>
+        </section>
+    </body>
+</html>
